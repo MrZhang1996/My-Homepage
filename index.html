@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Smith - Personal Homepage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .profile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .profile-info h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .profile-info .title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        main {
+            padding-bottom: 4rem;
+        }
+        
+        section {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .publications-list {
+            list-style: none;
+        }
+        
+        .publication-item {
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .publication-item h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .publication-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .status {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .status.accepted {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .status.oral {
+            background: #d1ecf1;
+            color: #0c5460;
+        }
+        
+        .status.workshop {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .status.published {
+            background: #cce5ff;
+            color: #004085;
+        }
+        
+        .links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+        
+        .links a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        
+        .links a:hover {
+            text-decoration: underline;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: #666;
+            border-top: 1px solid #eee;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .profile {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .profile-info h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="profile">
+                <img src="https://avatars.githubusercontent.com/u/65934388?v=4" alt="Profile Picture" class="profile-img">
+                <div class="profile-info">
+                    <h1>John Smith</h1>
+                    <div class="title">Machine Learning Researcher</div>
+                    <p>Specializing in Large Language Models, Adaptive Learning, and Contextual Reasoning</p>
+                    <div class="social-links">
+                        <a href="https://github.com/MrZhang1996" target="_blank">GitHub</a>
+                        <a href="https://scholar.google.com/citations?user=dummy123" target="_blank">Google Scholar</a>
+                        <a href="mailto:john.smith@university.edu">Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm a machine learning researcher focused on advancing large language models through innovative optimization techniques, adaptive learning strategies, and efficient architectural designs. My work spans multiple conferences including ACL, ICML, COML, and COAI.</p>
+        </section>
+        
+        <section id="publications">
+            <h2>Publications</h2>
+            <ul class="publications-list">
+                <li class="publication-item">
+                    <h3>Ipsum Lorem is All You Need</h3>
+                    <div class="publication-meta">
+                        <span class="status accepted">Accepted</span>
+                        <span class="status oral">Oral Presentation</span>
+                        <span>COML 2026</span>
+                        <span>Conference on Machine Learning</span>
+                    </div>
+                    <p>Introduces a novel approach to simplifying LLM architectures, demonstrating that Ipsum Lorem techniques can achieve competitive performance with reduced computational costs.</p>
+                    <div class="links">
+                        <a href="https://github.com/MrZhang1996/ipsum-lorem-all-you-need" target="_blank">Code Repository</a>
+                        <a href="https://openreview.net/forum?id=example123" target="_blank">OpenReview</a>
+                    </div>
+                </li>
+                
+                <li class="publication-item">
+                    <h3>Optimizing Large Language Models for Contextual Reasoning in Multi-Task Environments</h3>
+                    <div class="publication-meta">
+                        <span class="status accepted">Accepted</span>
+                        <span>COAI 2026</span>
+                        <span>Conference on Artificial Intelligence</span>
+                    </div>
+                    <p>Proposes optimization strategies for LLMs to enhance contextual reasoning across multiple tasks, with empirical results showing superior adaptability in dynamic environments.</p>
+                    <div class="links">
+                        <a href="https://github.com/MrZhang1996/optimizing-llms-contextual-reasoning" target="_blank">Code Repository</a>
+                    </div>
+                </li>
+                
+                <li class="publication-item">
+                    <h3>Ipsum Lorem is all you need for a workshop</h3>
+                    <div class="publication-meta">
+                        <span class="status workshop">Workshop Paper</span>
+                        <span>COMLW 2026</span>
+                        <span>COML Workshop on Large Language Models</span>
+                    </div>
+                    <p>Extended version of our COML paper focusing on workshop applications and implementations.</p>
+                </li>
+                
+                <li class="publication-item">
+                    <h3>Adaptive Learning Strategies for Large Language Models in Dynamic Environments</h3>
+                    <div class="publication-meta">
+                        <span class="status published">Published</span>
+                        <span>ICML 2025</span>
+                        <span>International Conference on Machine Learning</span>
+                    </div>
+                    <p>Presents adaptive learning techniques for Large Language Models (LLMs), enabling real-time adjustment to dynamic environments with significant improvements validated on diverse datasets.</p>
+                    <div class="links">
+                        <a href="https://github.com/MrZhang1996/llm-adaptive-learning" target="_blank">Code Repository</a>
+                    </div>
+                </li>
+                
+                <li class="publication-item">
+                    <h3>Enhancing Large Language Models with Advanced Fine-Tuning Techniques</h3>
+                    <div class="publication-meta">
+                        <span class="status published">Published</span>
+                        <span>ACL 2024</span>
+                        <span>Annual Meeting of the Association for Computational Linguistics</span>
+                    </div>
+                    <p>Explores novel fine-tuning methods to improve the performance of Large Language Models (LLMs) in domain-specific tasks, achieving state-of-the-art results on benchmarks like GLUE and SuperGLUE.</p>
+                    <div class="links">
+                        <a href="https://github.com/MrZhang1996/enhancing-llms" target="_blank">Code Repository</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        
+        <section id="projects">
+            <h2>Research Projects</h2>
+            <div class="publication-item">
+                <h3>LUFFY</h3>
+                <p>A research project exploring novel approaches to language understanding and generation.</p>
+                <div class="links">
+                    <a href="https://github.com/MrZhang1996/LUFFY" target="_blank">Code Repository</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>For research collaborations, questions about my work, or any other inquiries, feel free to reach out:</p>
+            <ul style="margin-top: 1rem;">
+                <li>Email: john.smith@university.edu</li>
+                <li>GitHub: <a href="https://github.com/MrZhang1996" target="_blank">github.com/MrZhang1996</a></li>
+                <li>Google Scholar: <a href="https://scholar.google.com/citations?user=dummy123" target="_blank">Scholar Profile</a></li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>© 2026 John Smith. All rights reserved.</p>
+            <p>Last updated: January 1, 2026</p>
+        </div>
+    </footer>
+</body>
+</html>
